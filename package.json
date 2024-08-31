@@ -2,11 +2,23 @@
   "name": "app-vue-wordpress",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/laravue-lib.umd.cjs",
+  "module": "./dist/laravue-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/laravue-lib.js",
+      "require": "./dist/laravue-lib.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+ 
+
   "dependencies": {
     "vue": "^3.4.37"
   },
