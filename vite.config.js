@@ -4,21 +4,22 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.includes('laravue-lib')
+      }
+    }
+  })],
   build: {
     lib: {
-      entry: resolve(__dirname, 'lib/main.js'),
-      name: "LaravueLib",
+      entry: resolve(__dirname, 'src/main.ce.js'),
+      name: "laravue-lib",
       fileName: "laravue-lib",
     },
     
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        globals: {
-          vue: "vue",
-        },
-      },
+    define: {
+      'process.env': process.env
     },
   },
 });
