@@ -18,4 +18,7 @@ export default defineConfig({
       fileName: "laravue-lib",
     },
   },
+  define: {
+    'process.env': false
+  }
 });
