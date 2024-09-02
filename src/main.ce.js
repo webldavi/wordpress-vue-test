@@ -1,6 +1,11 @@
-import { defineCustomElement } from 'vue'
-import SimpleSampleComponent from './components/HelloWorld.vue'
+import { defineCustomElement } from "vue";
 
-const SimpleSample = defineCustomElement(SimpleSampleComponent)
+import "@/assets/index.css"
+import SimpleSampleComponent from "./components/HelloWorld.vue";
 
-customElements.define('laravue-lib', SimpleSample)
+
+const SimpleSample = defineCustomElement(SimpleSampleComponent);
+
+
+customElements.define("laravue-lib", SimpleSample);
+
