@@ -17,9 +17,5 @@ export default defineConfig({
       name: "laravue-lib",
       fileName: "laravue-lib",
     },
-    
-    define: {
-      'process.env': process.env
-    },
   },
 });
